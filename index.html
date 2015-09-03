@@ -28,6 +28,28 @@
     <h1>Hello World!</h1>
     <p class="lead">This is something!</p>
 
+    <form action="index.html" method="get">
+
+        <div class="row">
+            <div class="col-xs-2">
+                <p>
+                    <input id="number" class="form-control" type="text" placeholder="Enter a number" value="25">
+                </p>
+            </div>
+            <div class="col-xs-2">
+                <input type="button" class="btn btn-primary" id="fizzBuzzer" value="fizzbuzz">
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-6" id="result">
+
+            </div>
+        </div>
+
+    </form>
+
 </div><!-- /.container -->
 
 
@@ -36,5 +58,32 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+
+<script>
+    $( document ).ready(function() {
+
+        $('#fizzBuzzer').click(function(){
+
+            $('#result').html('');
+
+            var num = $('#number').val();
+
+            for (i = 1; i < num; i++) {
+                console.log('one');
+
+                var displayValue = i;
+
+                if((i % 3) == 0) displayValue = 'fizz';
+                if((i % 5) == 0) displayValue = 'buzz';
+                if(((i % 3) == 0) && ((i % 5) == 0)) displayValue = 'fizzbuzz';
+
+                $('#result').append(displayValue+'<br>');
+            }
+
+        });
+
+    });
+</script>
+
 </body>
 </html>
