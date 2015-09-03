@@ -58,32 +58,7 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-
-<script>
-    $( document ).ready(function() {
-
-        $('#fizzBuzzer').click(function(){
-
-            $('#result').html('');
-
-            var num = $('#number').val();
-
-            for (i = 1; i < num; i++) {
-                console.log('one');
-
-                var displayValue = i;
-
-                if((i % 3) == 0) displayValue = 'fizz';
-                if((i % 5) == 0) displayValue = 'buzz';
-                if(((i % 3) == 0) && ((i % 5) == 0)) displayValue = 'fizzbuzz';
-
-                $('#result').append(displayValue+'<br>');
-            }
-
-        });
-
-    });
-</script>
+<script src="js/fizzbuzz.js"></script>
 
 </body>
 </html>
